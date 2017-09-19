@@ -4,6 +4,7 @@
 #include <iostream>
 #include <ostream>
 #include <vector>
+#include <list>
 #include <iterator>
 #include <functional>
 #include <algorithm>
@@ -107,6 +108,7 @@ private:
   std::vector<std::thread> th;
   std::vector<std::list<Vertex>> sources;
   std::vector<int> run_levels;
+  std::vector<int> run_order;
   std::vector<int> delta;
   Vertex initial_node;
     

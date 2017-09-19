@@ -1,0 +1,110 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/charles/CLionProjects/Task_Scheduler/bin/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_1d5c6/fast"
+/usr/bin/make -f CMakeFiles/cmTC_1d5c6.dir/build.make CMakeFiles/cmTC_1d5c6.dir/build
+make[1]: Entering directory '/home/charles/CLionProjects/Task_Scheduler/bin/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1d5c6.dir/CheckSymbolExists.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_1d5c6.dir/CheckSymbolExists.c.o   -c /home/charles/CLionProjects/Task_Scheduler/bin/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_1d5c6
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1d5c6.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_1d5c6.dir/CheckSymbolExists.c.o  -o cmTC_1d5c6 -rdynamic 
+CMakeFiles/cmTC_1d5c6.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_1d5c6.dir/build.make:97: recipe for target 'cmTC_1d5c6' failed
+make[1]: *** [cmTC_1d5c6] Error 1
+make[1]: Leaving directory '/home/charles/CLionProjects/Task_Scheduler/bin/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_1d5c6/fast' failed
+make: *** [cmTC_1d5c6/fast] Error 2
+
+File /home/charles/CLionProjects/Task_Scheduler/bin/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/charles/CLionProjects/Task_Scheduler/bin/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_131ed/fast"
+/usr/bin/make -f CMakeFiles/cmTC_131ed.dir/build.make CMakeFiles/cmTC_131ed.dir/build
+make[1]: Entering directory '/home/charles/CLionProjects/Task_Scheduler/bin/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_131ed.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_131ed.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_131ed
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_131ed.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_131ed.dir/CheckFunctionExists.c.o  -o cmTC_131ed -rdynamic -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_131ed.dir/build.make:97: recipe for target 'cmTC_131ed' failed
+make[1]: *** [cmTC_131ed] Error 1
+make[1]: Leaving directory '/home/charles/CLionProjects/Task_Scheduler/bin/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_131ed/fast' failed
+make: *** [cmTC_131ed/fast] Error 2
+
+
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/charles/CLionProjects/Task_Scheduler/bin/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_c99af/fast"
+/usr/bin/make -f CMakeFiles/cmTC_c99af.dir/build.make CMakeFiles/cmTC_c99af.dir/build
+make[1]: Entering directory '/home/charles/CLionProjects/Task_Scheduler/bin/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c99af.dir/CheckSymbolExists.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_c99af.dir/CheckSymbolExists.c.o   -c /home/charles/CLionProjects/Task_Scheduler/bin/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_c99af
+/home/charles/JetBrains/clion-2017.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c99af.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_c99af.dir/CheckSymbolExists.c.o  -o cmTC_c99af -rdynamic 
+CMakeFiles/cmTC_c99af.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_c99af.dir/build.make:97: recipe for target 'cmTC_c99af' failed
+make[1]: *** [cmTC_c99af] Error 1
+make[1]: Leaving directory '/home/charles/CLionProjects/Task_Scheduler/bin/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_c99af/fast' failed
+make: *** [cmTC_c99af/fast] Error 2
+
+File /home/charles/CLionProjects/Task_Scheduler/bin/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/charles/CLionProjects/Task_Scheduler/bin/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_ae000/fast"
+/usr/bin/make -f CMakeFiles/cmTC_ae000.dir/build.make CMakeFiles/cmTC_ae000.dir/build
+make[1]: Entering directory '/home/charles/CLionProjects/Task_Scheduler/bin/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ae000.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_ae000.dir/CheckFunctionExists.c.o   -c /home/charles/JetBrains/clion-2017.1/bin/cmake/share/cmake-3.7/Modules/CheckFunctionExists.c
+Linking C executable cmTC_ae000
+/home/charles/JetBrains/clion-2017.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ae000.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_ae000.dir/CheckFunctionExists.c.o  -o cmTC_ae000 -rdynamic -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_ae000.dir/build.make:97: recipe for target 'cmTC_ae000' failed
+make[1]: *** [cmTC_ae000] Error 1
+make[1]: Leaving directory '/home/charles/CLionProjects/Task_Scheduler/bin/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_ae000/fast' failed
+make: *** [cmTC_ae000/fast] Error 2
+
+

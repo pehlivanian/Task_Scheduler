@@ -28,25 +28,33 @@ int main(int argc, char **argv)
   
    Graph deps(N);
 
+//    boost::add_edge(task_0, task_2, deps);
+//    boost::add_edge(task_2, task_1, deps);
+//    boost::add_edge(task_1, task_3, deps);
+//    boost::add_edge(task_3, task_4, deps);
+//    boost::add_edge(task_4, task_5, deps);
+//    boost::add_edge(task_5, task_6, deps);
+//    boost::add_edge(task_6, task_7, deps);
+
    boost::add_edge(task_0, task_1, deps);
    boost::add_edge(task_0, task_2, deps);
-   boost::add_edge(task_1, task_3, deps);
+   boost::add_edge(task_0, task_3, deps);
    boost::add_edge(task_2, task_3, deps);
    boost::add_edge(task_3, task_4, deps);
-   boost::add_edge(task_4, task_5, deps);
-   boost::add_edge(task_5, task_6, deps);
-   boost::add_edge(task_5, task_7, deps);
+   boost::add_edge(task_3, task_5, deps);
+   boost::add_edge(task_3, task_6, deps);
+   boost::add_edge(task_3, task_7, deps);
 
    std::vector<F> tasks = 
      {
-	std::bind(basic_task, 0, 100),
-	std::bind(basic_task, 1, 100),
-	std::bind(basic_task, 2, 100),
-	std::bind(basic_task, 3, 100),
-	std::bind(basic_task, 4, 100),
-	std::bind(basic_task, 5, 100),
-	std::bind(basic_task, 6, 100),
-	std::bind(basic_task, 7, 100)
+	std::bind(basic_task, 0, 0),
+	std::bind(basic_task, 1, 0),
+	std::bind(basic_task, 2, 0),
+	std::bind(basic_task, 3, 0),
+	std::bind(basic_task, 4, 0),
+	std::bind(basic_task, 5, 0),
+	std::bind(basic_task, 6, 0),
+	std::bind(basic_task, 7, 0)
      };
 
      {

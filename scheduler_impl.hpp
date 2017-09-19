@@ -1,13 +1,18 @@
+
 #ifndef __SCHEDULER_IMPL_HPP__
 #define __SCHEDULER_IMPL_HPP__
 
+#include <numeric>
+#include <iostream>
+#include <ostream>
+#include <iterator>
 
 template<typename F>
 void
 scheduler<F>::set_futures()
 {
   int num_tasks = tasks.size();
-      
+
   prom.resize(num_tasks);
   fut.resize(num_tasks);
 
@@ -38,6 +43,7 @@ scheduler<F>::set_sources()
                 {
                   return get_sources(cnt++);
                 });
+
 }
 
 template<typename F>
@@ -161,6 +167,13 @@ scheduler<F>::set_run_levels()
             }
         }
     }
+
+    run_order = std::vector<int>(run_levels.size());
+    std::iota(run_order.begin(), run_order.end(), 0);
+
+    auto run_order_sorter = [this](int l, int r){ return this->run_levels[l] < this->run_levels[r];};
+    std::sort(run_order.begin(), run_order.end(), run_order_sorter);
+
 }
 
 template<typename F>
@@ -196,8 +209,8 @@ template<typename F>
 auto
 scheduler<F>::task_thread(fun_type&& f, int i)
 {
-  auto j_beg = sources[i].begin(), 
-    j_end = sources[i].end();
+  auto j_beg = sources[i].begin(), j_end = sources[i].end();
+
   for(;
       j_beg != j_end;
       ++j_beg)
@@ -217,20 +230,20 @@ scheduler<F>::set_tasks() noexcept
 {
   size_t num_tasks = tasks.size();
   th.resize(num_tasks);
-  
-  for(int i=0;
-      i<num_tasks;
-      ++i)
+
+
+  for(int i : run_order)
     {
       th[i] = task_thread(std::move(tasks[i]), i);
-    }
+     }
 }
 
 template<typename F>
 void
 scheduler<F>::join_tasks() noexcept
 {
-  for_each(th.begin(), th.end(), [](auto&& t){ if (t.joinable()) { t.join(); }});
+    // for_each(run_order.begin(), run_order.end(), [this](auto i){if (this->th[i].joinable()) { this->th[i].join(); }});
+    for_each(th.begin(), th.end(), [](auto&& t){ if (t.joinable()) { t.join(); }});
 }
 
 template<typename F>

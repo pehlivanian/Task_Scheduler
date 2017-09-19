@@ -1,0 +1,56 @@
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/charles/CLionProjects/Task_Scheduler/bin/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_0683c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_0683c.dir/build.make CMakeFiles/cmTC_0683c.dir/build
+make[1]: Entering directory '/home/charles/CLionProjects/Task_Scheduler/bin/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0683c.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_0683c.dir/CheckIncludeFile.c.o   -c /home/charles/CLionProjects/Task_Scheduler/bin/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_0683c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0683c.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_0683c.dir/CheckIncludeFile.c.o  -o cmTC_0683c -rdynamic 
+make[1]: Leaving directory '/home/charles/CLionProjects/Task_Scheduler/bin/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/charles/CLionProjects/Task_Scheduler/bin/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_fa85e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_fa85e.dir/build.make CMakeFiles/cmTC_fa85e.dir/build
+make[1]: Entering directory '/home/charles/CLionProjects/Task_Scheduler/bin/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_fa85e.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_fa85e.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_fa85e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fa85e.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_fa85e.dir/CheckFunctionExists.c.o  -o cmTC_fa85e -rdynamic -lpthread 
+make[1]: Leaving directory '/home/charles/CLionProjects/Task_Scheduler/bin/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/charles/CLionProjects/Task_Scheduler/bin/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_c2010/fast"
+/usr/bin/make -f CMakeFiles/cmTC_c2010.dir/build.make CMakeFiles/cmTC_c2010.dir/build
+make[1]: Entering directory '/home/charles/CLionProjects/Task_Scheduler/bin/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c2010.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_c2010.dir/CheckIncludeFile.c.o   -c /home/charles/CLionProjects/Task_Scheduler/bin/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_c2010
+/home/charles/JetBrains/clion-2017.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c2010.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_c2010.dir/CheckIncludeFile.c.o  -o cmTC_c2010 -rdynamic 
+make[1]: Leaving directory '/home/charles/CLionProjects/Task_Scheduler/bin/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/charles/CLionProjects/Task_Scheduler/bin/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_c4dc3/fast"
+/usr/bin/make -f CMakeFiles/cmTC_c4dc3.dir/build.make CMakeFiles/cmTC_c4dc3.dir/build
+make[1]: Entering directory '/home/charles/CLionProjects/Task_Scheduler/bin/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c4dc3.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_c4dc3.dir/CheckFunctionExists.c.o   -c /home/charles/JetBrains/clion-2017.1/bin/cmake/share/cmake-3.7/Modules/CheckFunctionExists.c
+Linking C executable cmTC_c4dc3
+/home/charles/JetBrains/clion-2017.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c4dc3.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_c4dc3.dir/CheckFunctionExists.c.o  -o cmTC_c4dc3 -rdynamic -lpthread 
+make[1]: Leaving directory '/home/charles/CLionProjects/Task_Scheduler/bin/CMakeFiles/CMakeTmp'
+
+
