@@ -64,6 +64,9 @@ public:
   using fun_type = F;
   using prom_type = std::promise<ret_type>;
   using fut_type = std::shared_future<ret_type>;
+  using thread_vec = std::vector<std::thread>;
+  using int_vec = std::vector<int>;
+  
 
   ~scheduler();
   scheduler() = default;
@@ -93,23 +96,24 @@ private:
   void set_initial_node(bool checkDAG=true);
   void set_run_levels();
   void set_tasks() noexcept;
+  
   void join_tasks() noexcept;
-  bool is_DAG(const Graph&);
-  std::vector<int> ELS_delta(const Graph&);
-  size_t graph_size(const Graph& g);
+  
+  bool is_DAG(const Graph&) const;
+  std::vector<int> ELS_delta(const Graph&) const;
 
-  std::list<Vertex> get_sources(const Vertex&);
+  std::list<Vertex> get_sources(const Vertex&) const;
   auto task_thread(fun_type&&, int);
 
   Graph g;
   std::vector<fun_type> tasks;
   std::vector<prom_type> prom;
   std::vector<fut_type> fut;
-  std::vector<std::thread> th;
+  thread_vec th;
   std::vector<std::list<Vertex>> sources;
-  std::vector<int> run_levels;
-  std::vector<int> run_order;
-  std::vector<int> delta;
+  int_vec run_levels;
+  int_vec run_order;
+  int_vec delta;
   Vertex initial_node;
     
 };
